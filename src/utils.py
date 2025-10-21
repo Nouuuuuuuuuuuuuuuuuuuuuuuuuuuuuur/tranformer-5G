@@ -1,4 +1,5 @@
-from sionna.utils.metrics import compute_ber, compute_bler
+#from sionna.utils.metrics import compute_ber, compute_bler
+from sionna.phy.utils import compute_ber, compute_bler
 import tensorflow as tf
 import os
 import time
