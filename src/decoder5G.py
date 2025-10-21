@@ -3,8 +3,8 @@ import numpy as np
 #from sionna.fec.ldpc import LDPC5GDecoder
 from sionna.phy.fec.ldpc import LDPC5GDecoder
 
-from src.utils5G import generate_pruned_pcm_5g
-from src.decoder import Decoder
+from utils5G import generate_pruned_pcm_5g
+from decoder import Decoder
 
 class Decoder5G( Decoder ):
     """
