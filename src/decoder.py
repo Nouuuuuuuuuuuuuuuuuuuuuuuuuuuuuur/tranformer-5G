@@ -5,7 +5,7 @@ import tensorflow as tf
 
 import matplotlib.pyplot as plt
 import numpy as np
-from .utils import llr_to_bin, logits_to_bin, bin_to_llr, logits_to_llr
+from utils import llr_to_bin, logits_to_bin, bin_to_llr, logits_to_llr
 
 
 class LinearMHAttention( Layer ):
