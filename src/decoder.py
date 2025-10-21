@@ -208,7 +208,7 @@ class TransformerEncoderBlock(tf.keras.layers.Layer):
 
 class decoder( Layer ):
     """
-    Decoder
+    decoder
     -------
     The main class for decoding LDPC codes using transformer layers.
 
