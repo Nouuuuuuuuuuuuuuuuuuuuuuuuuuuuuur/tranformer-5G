@@ -206,7 +206,7 @@ class TransformerEncoderBlock(tf.keras.layers.Layer):
         return out2
 
 
-class Decoder( Layer ):
+class decoder( Layer ):
     """
     Decoder
     -------
