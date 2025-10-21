@@ -4,9 +4,9 @@ import numpy as np
 from sionna.phy.fec.ldpc import LDPC5GDecoder
 
 from utils5G import generate_pruned_pcm_5g
-from decoder import Decoder
+from decoder import decoder
 
-class Decoder5G( Decoder ):
+class Decoder5G( decoder ):
     """
     Decoder5G
     ---------
