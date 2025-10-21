@@ -1,8 +1,12 @@
 
 # for e2e model
-from sionna.utils import BinarySource, ebnodb2no
-from sionna.mapping import Mapper, Demapper
-from sionna.channel import AWGN
+#from sionna.utils import BinarySource, ebnodb2no
+from sionna.phy.mapping import BinarySource
+from sionna.phy.utils import ebnodb2no
+#from sionna.mapping import Mapper, Demapper
+from sionna.phy.mapping import Mapper, Demapper
+#from sionna.channel import AWGN
+from sionna.phy.channel import AWGN
 import tensorflow as tf
 
 from .utils import logits_to_bin
