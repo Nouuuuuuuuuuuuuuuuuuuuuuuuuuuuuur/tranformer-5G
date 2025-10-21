@@ -9,7 +9,7 @@ from sionna.phy.mapping import Mapper, Demapper
 from sionna.phy.channel import AWGN
 import tensorflow as tf
 
-from .utils import logits_to_bin
+from utils import logits_to_bin
 
 
 class E2EModel(tf.keras.Model):
