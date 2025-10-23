@@ -202,4 +202,3 @@ def plot_comparison(data, colors=['blue', 'green', 'red']):
     ax.legend(loc='upper left', title="Decoders")
     ax.grid(True)
     plt.show()
-
