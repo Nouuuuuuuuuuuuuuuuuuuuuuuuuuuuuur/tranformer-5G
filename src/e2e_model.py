@@ -1,15 +1,11 @@
 
 # for e2e model
-#from sionna.utils import BinarySource, ebnodb2no
-from sionna.phy.mapping import BinarySource
-from sionna.phy.utils import ebnodb2no
-#from sionna.mapping import Mapper, Demapper
-from sionna.phy.mapping import Mapper, Demapper
-#from sionna.channel import AWGN
-from sionna.phy.channel import AWGN
+from sionna.utils import BinarySource, ebnodb2no
+from sionna.mapping import Mapper, Demapper
+from sionna.channel import AWGN
 import tensorflow as tf
 
-from utils import logits_to_bin
+from .utils import logits_to_bin
 
 
 class E2EModel(tf.keras.Model):
@@ -123,10 +119,8 @@ class E2EModel(tf.keras.Model):
             c_pad = c
         x = self._mapper(c_pad)
 
-      #  y = self._channel([x, no])
-      #  llr = self._demapper([y, no])
-        y = self._channel(x, no)
-        llr = self._demapper(y, no)
+        y = self._channel([x, no])
+        llr = self._demapper([y, no])
 
         # remove zero padded bit at the end
         if self._n%2==1:
