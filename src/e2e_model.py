@@ -123,8 +123,10 @@ class E2EModel(tf.keras.Model):
             c_pad = c
         x = self._mapper(c_pad)
 
-        y = self._channel([x, no])
-        llr = self._demapper([y, no])
+      #  y = self._channel([x, no])
+      #  llr = self._demapper([y, no])
+        y = self._channel(x, no)
+        llr = self._demapper(y, no)
 
         # remove zero padded bit at the end
         if self._n%2==1:
