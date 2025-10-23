@@ -1,12 +1,11 @@
 import tensorflow as tf
 import numpy as np
-#from sionna.fec.ldpc import LDPC5GDecoder
-from sionna.phy.fec.ldpc import LDPC5GDecoder
+from sionna.fec.ldpc import LDPC5GDecoder
 
-from utils5G import generate_pruned_pcm_5g
-from decoder import decoder
+from src.utils5G import generate_pruned_pcm_5g
+from src.decoder import Decoder
 
-class Decoder5G( decoder ):
+class Decoder5G( Decoder ):
     """
     Decoder5G
     ---------
