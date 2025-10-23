@@ -1,5 +1,4 @@
-#from sionna.utils.metrics import compute_ber, compute_bler
-from sionna.phy.utils import compute_ber, compute_bler
+from sionna.utils.metrics import compute_ber, compute_bler
 import tensorflow as tf
 import os
 import time
@@ -249,9 +248,8 @@ def train_dec(model, args, file_name, save_path='./Decoder_weights/ECC_weights/'
                                     maxval=args.ebno_db_max)
 
         with tf.GradientTape() as tape:
-           # c, c_hat, c_hat_logits, _ = model(args.batch_size, ebno_db, training=True)
-            c, c_hat, c_hat_logits, _ = model(batch_size=args.batch_size, ebno_db=ebno_db, training=True)
-        
+            c, c_hat, c_hat_logits, _ = model(args.batch_size, ebno_db, training=True)
+            
             # Calculates the aggregate loss for the first layer, then for the iterative refinement layer
             loss_value = loss_fn(c, c_hat_logits)
 
