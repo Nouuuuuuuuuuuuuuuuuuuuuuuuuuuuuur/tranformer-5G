@@ -5,7 +5,7 @@ import tensorflow as tf
 
 import matplotlib.pyplot as plt
 import numpy as np
-from utils import llr_to_bin, logits_to_bin, bin_to_llr, logits_to_llr
+from .utils import llr_to_bin, logits_to_bin, bin_to_llr, logits_to_llr
 
 
 class LinearMHAttention( Layer ):
@@ -206,9 +206,9 @@ class TransformerEncoderBlock(tf.keras.layers.Layer):
         return out2
 
 
-class decoder( Layer ):
+class Decoder( Layer ):
     """
-    decoder
+    Decoder
     -------
     The main class for decoding LDPC codes using transformer layers.
 
